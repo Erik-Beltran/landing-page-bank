@@ -6,7 +6,7 @@ import Reveal from "../Reveal/Reveal";
 
 export default function ControlBilling() {
   return (
-    <div className="p-4 py-20 md:py-64">
+    <div className="p-6">
       <div className="flex flex-col-reverse max-w-5xl mx-auto md:flex-row items-center gap-4">
         <div className="flex flex-col md:max-w-[60%]">
           <MotionTransition className="p-6 md:p-8">

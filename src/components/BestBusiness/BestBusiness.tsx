@@ -1,10 +1,38 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import Banner from "../Banner/Banner";
+import CounterData from "../CounterData/CounterData";
 import Reveal from "../Reveal/Reveal";
 import { dataFeaturesBusiness } from "./BestBusiness.data";
 
 export default function BestBusiness() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    // Cleanup the observer on component unmount
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <div id="features">
+    <div id="features" ref={ref}>
+      {isVisible && <CounterData />}
       <Banner
         subtitle
         underlined="You do the business"

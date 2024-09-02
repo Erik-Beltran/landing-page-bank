@@ -11,9 +11,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
+    <main className="h-screen overflow-auto snap-y snap-mandatory">
       <Header />
-      <div className="mt-16 -z-0">
+      <div className="pt-16  md:pt-0 md:h-screen snap-center flex justify-center items-center">
         <Banner
           text1="Boost"
           underlined="Your Financial Life"
@@ -31,12 +31,22 @@ export default function Home() {
           />
         </Banner>
       </div>
-      <BestBusiness />
-      <ChooseCard />
-      <ControlBilling />
-      <Testimonials />
-      <PaymentMethods />
-      <Footer />
-    </div>
+      <div className="snap-center pt-16 md:pt-0 md:h-screen flex items-center justify-center">
+        <BestBusiness />
+      </div>
+      <div className="snap-center pt-16 md:pt-0 md:h-screen flex flex-col justify-center">
+        <ChooseCard />
+      </div>
+      <div className="snap-center pt-16 md:pt-0 md:h-screen flex items-center">
+        <ControlBilling />
+      </div>
+      <div className="snap-center pt-16 md:pt-0 md:h-screen flex flex-col justify-center">
+        <Testimonials />
+      </div>
+      <div className="snap-center pt-16 md:pt-0 md:h-screenflex flex-col justify-center">
+        <PaymentMethods />
+        <Footer />
+      </div>
+    </main>
   );
 }
