@@ -19,7 +19,7 @@ export default function Banner(props: BannerProps) {
     subtitle,
   } = props;
   return (
-    <div className="relative p-6">
+    <div className="p-6">
       {rightBG && (
         <div className="absolute right-0 -z-50 top-0">
           <Image src={rightBG} alt="banner image" width={850} height={650} />

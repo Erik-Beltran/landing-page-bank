@@ -8,12 +8,14 @@ import Header from "@/components/Header/Header";
 import PaymentMethods from "@/components/PaymentMethods/PaymentMethods";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import Image from "next/image";
+import favico from "../../public/favicon.ico";
 
 export default function Home() {
   return (
     <main className="h-screen overflow-auto snap-y snap-mandatory">
+      <link rel="shortcut icon" href={favico.src} type="image/x-icon" />
       <Header />
-      <div className="pt-16  md:pt-0 md:h-screen snap-center flex justify-center items-center">
+      <div className="pt-16  md:pt-0 md:h-screen snap-center flex justify-center items-center relative">
         <Banner
           text1="Boost"
           underlined="Your Financial Life"
@@ -31,16 +33,16 @@ export default function Home() {
           />
         </Banner>
       </div>
-      <div className="snap-center pt-16 md:pt-0 md:h-screen flex items-center justify-center">
+      <div className="snap-center pt-16 md:pt-0 md:h-screen flex items-center justify-center relative  ">
         <BestBusiness />
       </div>
-      <div className="snap-center pt-16 md:pt-0 md:h-screen flex flex-col justify-center">
+      <div className="snap-center pt-16 md:pt-0 md:h-screen flex flex-col justify-center relative">
         <ChooseCard />
       </div>
-      <div className="snap-center pt-16 md:pt-0 md:h-screen flex items-center">
+      <div className="snap-center pt-16 md:pt-0 md:h-screen flex items-center relative justify-center">
         <ControlBilling />
       </div>
-      <div className="snap-center pt-16 md:pt-0 md:h-screen flex flex-col justify-center">
+      <div className="snap-center pt-16 md:pt-0 md:h-screen flex flex-col justify-center relative">
         <Testimonials />
       </div>
       <div className="snap-center pt-16 md:pt-0 md:h-screenflex flex-col justify-center">

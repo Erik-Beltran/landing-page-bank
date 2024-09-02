@@ -14,6 +14,7 @@ export default function Footer() {
             height={40}
             alt="logo bank"
           />
+
           <Reveal>
             <p className="mt-5 text-primaryDark max-w-[250px]">
               A new way to make payments easily
