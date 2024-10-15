@@ -12,10 +12,10 @@ import favico from "../../public/favicon.ico";
 
 export default function Home() {
   return (
-    <main className="h-screen overflow-auto snap-y snap-mandatory">
+    <main className="h-screen overflow-auto md:snap-y md:snap-mandatory">
       <link rel="shortcut icon" href={favico.src} type="image/x-icon" />
       <Header />
-      <div className="pt-16  md:pt-0 md:h-screen snap-center flex justify-center items-center relative">
+      <div className="pt-16  md:pt-0 h-screen snap-center flex justify-center items-center relative">
         <Banner
           text1="Boost"
           underlined="Your Financial Life"
