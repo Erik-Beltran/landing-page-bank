@@ -12,7 +12,7 @@ import favico from "../../public/favicon.ico";
 
 export default function Home() {
   return (
-    <main className="h-screen overflow-auto md:snap-y md:snap-mandatory">
+    <main className="h-screen overflow-y-auto md:snap-y md:snap-mandatory overflow-x-hidden">
       <link rel="shortcut icon" href={favico.src} type="image/x-icon" />
       <Header />
       <div className="pt-16  md:pt-0 h-screen snap-center flex justify-center items-center relative">
